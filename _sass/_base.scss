@@ -173,14 +173,17 @@ header {
   &::before {
     content: "";
     position: absolute;
+    color: darkorchid;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     @include background-cover;
     background-position: center;
-    filter: blur(5px);
+    //filter: blur(5px);
     background-image: url('../img/header.jpg');
+    //background-color: var(--colour-darkest);
+    background-color: hsla(var(--hue, 245), 100%, 5%, 1);
     z-index: -1;
   }
 
@@ -394,12 +397,14 @@ body {
 }
 
 .tagline {
-  color: black;
+  color: white;
   font-size: 0.7em;
 }
 
 .title-text {
-  color: black;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  //background-color: rgba(0, 0, 0, 0.1);
   font-size: 2em;
 }
 
