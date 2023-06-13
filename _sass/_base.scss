@@ -284,12 +284,13 @@ header {
 
 .services-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around
 }
 
 .service-box {
   max-width: 400px;
-  margin: 50px auto 0;
+  margin: 50px 20px 0 20px;
   @media (min-width: 992px) {
     margin: 20px auto 0;
   }
