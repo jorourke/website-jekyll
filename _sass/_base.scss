@@ -1,8 +1,15 @@
+$primary-grey: #465362;
+$primary-yellow: #F9DC5C;
+$primary-dark: #011936;
+$primary-red: #ED254E;
+
 :root {
   --primary-color: hsla(var(--hue, 245), 100%, 5%, 1);
   --headline-font: "Degular Display Bold";
   --text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --theme-primary: #465362;
+  --primary-grey: $primary-grey;
+  --primary-dark: #011936;
+  --color-light: #C2EABD;
 }
 
 
@@ -17,7 +24,7 @@ body {
 }
 
 hr {
-  border-color: var(--theme-primary);
+  border-color: $primary-grey;
   border-width: 3px;
   max-width: 50px;
 }
@@ -28,11 +35,11 @@ hr.light {
 
 a {
   @include transition-all;
-  color: var(--theme-primary);
+  color: $primary-grey;
 
   &:hover,
   &:focus {
-    color: darken(var(--theme-primary), 10%);
+    color: darken($primary-grey, 10%);
   }
 }
 
@@ -61,7 +68,7 @@ p {
 
 .bg-primary {
   //background-color: var(--primary-color);
-  background-color: var(--theme-primary);
+  background-color: $primary-grey;
 }
 
 .bg-dark {
@@ -94,14 +101,14 @@ aside {
   @include transition-all;
 
   .navbar-header .navbar-brand {
-    color: var(--theme-primary);
+    color: $primary-grey;
     @include sans-serif-font;
     font-weight: 700;
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-      color: darken(var(--theme-primary), 10%);
+      color: darken($primary-grey, 10%);
     }
   }
 
@@ -115,14 +122,14 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: var(--theme-primary);
+          color: $primary-grey;
         }
       }
 
       &.active {
         > a,
         > a:focus {
-          color: var(--theme-primary) !important;
+          color: $primary-grey !important;
           background-color: transparent;
 
           &:hover {
@@ -157,12 +164,12 @@ aside {
       border-color: rgba($theme-dark, .5);
 
       .navbar-header .navbar-brand {
-        color: var(--theme-primary);
+        color: $primary-grey;
         font-size: 14px;
 
         &:hover,
         &:focus {
-          color: darken(var(--theme-primary), 10%);
+          color: darken($primary-grey, 10%);
         }
       }
 
@@ -171,7 +178,7 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: var(--theme-primary);
+          color: $primary-grey;
         }
       }
     }
@@ -197,7 +204,8 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/header.jpg');
-    background-color: var(--primary-color);
+    //background-color: var(--primary-color);
+    background-color: $primary-dark;
     z-index: -1;
   }
 
@@ -258,6 +266,9 @@ header {
 }
 
 // Sections
+.services {
+  background-color: var(--color-light);
+}
 
 .section-heading {
   margin-top: 0;
@@ -290,7 +301,7 @@ header {
     color: white;
     opacity: 0;
     display: block;
-    background: rgba(var(--theme-primary), .9);
+    background: rgba($primary-grey, .9);
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -352,7 +363,7 @@ header {
 
 // Bootstrap Overrides
 .text-primary {
-  color: var(--theme-primary);
+  color: $primary-grey;
 }
 
 .no-gutter > [class*='col-'] {
@@ -366,7 +377,7 @@ header {
 }
 
 .btn-primary {
-  @include button-variant(white, var(--theme-primary), var(--theme-primary));
+  @include button-variant(white, $primary-grey, $primary-grey);
 }
 
 .btn {
