@@ -52,6 +52,10 @@
   }
 }
 
+@mixin degular-display-bold() {
+  font-family: 'Degular Display Bold';
+}
+
 @mixin sans-serif-font() {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }

@@ -1,3 +1,11 @@
+:root {
+  --primary-color: hsla(var(--hue, 245), 100%, 5%, 1);
+  --headline-font: "Degular Display Bold";
+  --text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --theme-primary: #465362;
+}
+
+
 html,
 body {
   height: 100%;
@@ -9,7 +17,7 @@ body {
 }
 
 hr {
-  border-color: $theme-primary;
+  border-color: var(--theme-primary);
   border-width: 3px;
   max-width: 50px;
 }
@@ -20,31 +28,40 @@ hr.light {
 
 a {
   @include transition-all;
-  color: $theme-primary;
+  color: var(--theme-primary);
 
   &:hover,
   &:focus {
-    color: darken($theme-primary, 10%);
+    color: darken(var(--theme-primary), 10%);
   }
 }
 
-h1,
-h2,
+h1 {
+  @include degular-display-bold;
+}
+
+h2 {
+  font-family: var(--text-font);
+}
+
 h3,
 h4,
 h5,
 h6 {
-  @include sans-serif-font;
+  //@include sans-serif-font;
+  @include degular-display-bold;
 }
 
 p {
+  font-family: var(--text-font);
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .bg-primary {
-  background-color: $theme-primary;
+  //background-color: var(--primary-color);
+  background-color: var(--theme-primary);
 }
 
 .bg-dark {
@@ -77,14 +94,14 @@ aside {
   @include transition-all;
 
   .navbar-header .navbar-brand {
-    color: $theme-primary;
+    color: var(--theme-primary);
     @include sans-serif-font;
     font-weight: 700;
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-      color: darken($theme-primary, 10%);
+      color: darken(var(--theme-primary), 10%);
     }
   }
 
@@ -98,14 +115,14 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: $theme-primary;
+          color: var(--theme-primary);
         }
       }
 
       &.active {
         > a,
         > a:focus {
-          color: $theme-primary !important;
+          color: var(--theme-primary) !important;
           background-color: transparent;
 
           &:hover {
@@ -140,12 +157,12 @@ aside {
       border-color: rgba($theme-dark, .5);
 
       .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: var(--theme-primary);
         font-size: 14px;
 
         &:hover,
         &:focus {
-          color: darken($theme-primary, 10%);
+          color: darken(var(--theme-primary), 10%);
         }
       }
 
@@ -154,7 +171,7 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: $theme-primary;
+          color: var(--theme-primary);
         }
       }
     }
@@ -173,17 +190,14 @@ header {
   &::before {
     content: "";
     position: absolute;
-    color: darkorchid;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     @include background-cover;
     background-position: center;
-    //filter: blur(5px);
     background-image: url('../img/header.jpg');
-    //background-color: var(--colour-darkest);
-    background-color: hsla(var(--hue, 245), 100%, 5%, 1);
+    background-color: var(--primary-color);
     z-index: -1;
   }
 
@@ -192,14 +206,14 @@ header {
   //color: white;
   .header-content {
     position: relative;
-    text-align: center;
+    text-align: left;
     padding: 100px 15px 100px;
     width: 100%;
 
     .header-content-inner {
       h1 {
         font-weight: 700;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -249,6 +263,11 @@ header {
   margin-top: 0;
 }
 
+.services-row {
+  display: flex;
+  justify-content: space-around
+}
+
 .service-box {
   max-width: 400px;
   margin: 50px auto 0;
@@ -271,7 +290,7 @@ header {
     color: white;
     opacity: 0;
     display: block;
-    background: rgba($theme-primary, .9);
+    background: rgba(var(--theme-primary), .9);
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -333,7 +352,7 @@ header {
 
 // Bootstrap Overrides
 .text-primary {
-  color: $theme-primary;
+  color: var(--theme-primary);
 }
 
 .no-gutter > [class*='col-'] {
@@ -347,7 +366,7 @@ header {
 }
 
 .btn-primary {
-  @include button-variant(white, $theme-primary, $theme-primary);
+  @include button-variant(white, var(--theme-primary), var(--theme-primary));
 }
 
 .btn {
@@ -360,6 +379,13 @@ header {
 
 .btn-xl {
   padding: 15px 30px;
+}
+
+.btn-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
 
 // Contact
@@ -397,14 +423,15 @@ body {
 }
 
 .tagline {
-  color: white;
-  font-size: 0.7em;
+  color: #787797;
+  font-family: var(--text-font);
+  font-size: 22px;
+  width: clamp(325px, 85%, 50ch);;
+  margin-bottom: 65px;
 }
 
 .title-text {
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  //background-color: rgba(0, 0, 0, 0.1);
   font-size: 2em;
 }
 
