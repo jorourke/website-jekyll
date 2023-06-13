@@ -444,7 +444,7 @@ body {
 }
 
 .tagline {
-  color: #787797;
+  color: lighten($primary-dark, 30%);
   font-family: var(--text-font);
   font-size: 22px;
   width: clamp(325px, 85%, 50ch);;
