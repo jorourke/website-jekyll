@@ -56,16 +56,15 @@ h1 {
   @include degular-display-bold;
 }
 
-h2 {
-  font-family: var(--text-font);
-}
-
+h2,
 h3,
 h4,
 h5,
 h6 {
+  color: $primary-middle;
+  font-family: var(--text-font);
   //@include sans-serif-font;
-  @include degular-display-bold;
+  //@include degular-display-bold;
 }
 
 p {
@@ -367,6 +366,7 @@ header {
 
 .call-to-action {
   h2 {
+    color: rgba(white, .7);
     margin: 0 auto 20px;
   }
 }
@@ -411,7 +411,7 @@ header {
 
 // Contact
 #contact .fa {
-  color: $theme-dark;
+  color: $primary-middle;
   font-size: 4em;
 }
 
