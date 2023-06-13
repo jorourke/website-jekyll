@@ -1,15 +1,24 @@
-$primary-grey: #465362;
-$primary-yellow: #F9DC5C;
-$primary-dark: #011936;
-$primary-red: #ED254E;
+//$primary-middle: #465362;
+//$primary-light: #F9DC5C;
+//$primary-dark: #011936;
+//$primary-lightest: #ED254E;
+//$primary-lighter: #C2EABD;
+
+
+$primary-middle: #2E4756;
+$primary-light: #3C7A89;
+$primary-dark: #16262E;
+$primary-lightest: #DBC2CF;
+$primary-lighter: #9FA2B2;
+
 
 :root {
   --primary-color: hsla(var(--hue, 245), 100%, 5%, 1);
   --headline-font: "Degular Display Bold";
   --text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --primary-grey: $primary-grey;
+  --primary-grey: $primary-middle;
   --primary-dark: #011936;
-  --color-light: #C2EABD;
+  --color-light: $primary-lighter;
 }
 
 
@@ -24,7 +33,7 @@ body {
 }
 
 hr {
-  border-color: $primary-grey;
+  border-color: $primary-middle;
   border-width: 3px;
   max-width: 50px;
 }
@@ -35,11 +44,11 @@ hr.light {
 
 a {
   @include transition-all;
-  color: $primary-grey;
+  color: $primary-middle;
 
   &:hover,
   &:focus {
-    color: darken($primary-grey, 10%);
+    color: darken($primary-middle, 10%);
   }
 }
 
@@ -68,7 +77,7 @@ p {
 
 .bg-primary {
   //background-color: var(--primary-color);
-  background-color: $primary-grey;
+  background-color: $primary-middle;
 }
 
 .bg-dark {
@@ -101,14 +110,14 @@ aside {
   @include transition-all;
 
   .navbar-header .navbar-brand {
-    color: $primary-grey;
+    color: $primary-middle;
     @include sans-serif-font;
     font-weight: 700;
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-      color: darken($primary-grey, 10%);
+      color: darken($primary-middle, 10%);
     }
   }
 
@@ -122,14 +131,14 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: $primary-grey;
+          color: $primary-middle;
         }
       }
 
       &.active {
         > a,
         > a:focus {
-          color: $primary-grey !important;
+          color: $primary-middle !important;
           background-color: transparent;
 
           &:hover {
@@ -164,12 +173,12 @@ aside {
       border-color: rgba($theme-dark, .5);
 
       .navbar-header .navbar-brand {
-        color: $primary-grey;
+        color: $primary-middle;
         font-size: 14px;
 
         &:hover,
         &:focus {
-          color: darken($primary-grey, 10%);
+          color: darken($primary-middle, 10%);
         }
       }
 
@@ -178,7 +187,7 @@ aside {
         color: $theme-dark;
 
         &:hover {
-          color: $primary-grey;
+          color: $primary-middle;
         }
       }
     }
@@ -267,7 +276,7 @@ header {
 
 // Sections
 .services {
-  background-color: var(--color-light);
+  background-color: $primary-lighter;
 }
 
 .section-heading {
@@ -291,6 +300,7 @@ header {
   }
 }
 
+
 .portfolio-box {
   position: relative;
   display: block;
@@ -301,7 +311,7 @@ header {
     color: white;
     opacity: 0;
     display: block;
-    background: rgba($primary-grey, .9);
+    background: rgba($primary-middle, .9);
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -363,7 +373,7 @@ header {
 
 // Bootstrap Overrides
 .text-primary {
-  color: $primary-grey;
+  color: $primary-middle;
 }
 
 .no-gutter > [class*='col-'] {
@@ -377,7 +387,7 @@ header {
 }
 
 .btn-primary {
-  @include button-variant(white, $primary-grey, $primary-grey);
+  @include button-variant(white, $primary-middle, $primary-middle);
 }
 
 .btn {
@@ -450,3 +460,6 @@ body {
 //    backdrop-filter: blur(5px);
 //}
 
+.background-lightest {
+  background-color: $primary-lightest
+}
