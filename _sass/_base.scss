@@ -338,6 +338,7 @@ header {
 
   max-width: 650px;
   margin: 0 auto;
+
   .icon {
     width: 350px;
     height: 350px;
@@ -488,7 +489,7 @@ body {
 }
 
 .medium-text {
-  color: lighten($primary-dark, 30%);
+  color: lighten($primary-dark, 60%);
   font-family: var(--text-font);
   font-size: 22px;
   width: clamp(325px, 85%, 50ch);;
@@ -509,6 +510,9 @@ body {
 //.blurred-background {
 //    backdrop-filter: blur(5px);
 //}
+.background-darkest {
+  background-color: $primary-dark
+}
 
 .background-lightest {
   background-color: $primary-lightest
