@@ -322,12 +322,27 @@ header {
   }
 }
 
+.portfolio-section {
+  h2 {
+    margin-bottom: 50px !important;
+  }
+}
+
 
 .portfolio-box {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
   max-width: 650px;
   margin: 0 auto;
+  .icon {
+    width: 350px;
+    height: 350px;
+    align-content: center;
+  }
 
   .portfolio-box-caption {
     color: white;
