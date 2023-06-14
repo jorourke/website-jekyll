@@ -210,6 +210,7 @@ header {
   min-height: auto;
   @include background-cover;
   background-position: center;
+
   &::before {
     content: "";
     position: absolute;
@@ -225,6 +226,17 @@ header {
   }
 
   .header-content {
+    animation: fade-in 2s ease-in-out;
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     display: flex;
     flex-direction: row;
     position: relative;
