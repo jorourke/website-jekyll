@@ -307,7 +307,12 @@ header {
 .services-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around
+  align-items: flex-start;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: space-around;  // Distributes items evenly in the line
+    gap: 20px;  // Increases gap size for larger screens
+  }
 }
 
 .service-box {
