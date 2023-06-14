@@ -210,7 +210,6 @@ header {
   min-height: auto;
   @include background-cover;
   background-position: center;
-  //filter: blur(5px);
   &::before {
     content: "";
     position: absolute;
@@ -221,7 +220,6 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/header.jpg');
-    //background-color: var(--primary-color);
     background-color: $primary-dark;
     z-index: -1;
   }
@@ -243,6 +241,9 @@ header {
         height: auto;
         width: 200px;
         margin: 100px;
+        @media (max-width: 768px) {
+          margin: 30px;
+        }
       }
     }
 
@@ -270,7 +271,7 @@ header {
   }
 
   @media (min-width: 768px) {
-    min-height: 100%;
+    min-height: 100vh;
     .header-content {
       position: absolute;
       top: 50%;
@@ -278,6 +279,13 @@ header {
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       padding: 0 50px;
+
+      &.project-detail {
+        position: relative;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+      }
 
       .header-content-inner {
         max-width: 1000px;
@@ -304,14 +312,15 @@ header {
   margin-top: 0;
 }
 
+
 .services-row {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   @media (min-width: 768px) {
-    justify-content: space-around;  // Distributes items evenly in the line
-    gap: 20px;  // Increases gap size for larger screens
+    justify-content: space-around; // Distributes items evenly in the line
+    gap: 20px; // Increases gap size for larger screens
   }
 }
 
@@ -462,6 +471,7 @@ header {
 #contact h2 {
   color: $primary-lightest;
 }
+
 #contact p {
   color: $primary-lightest;
 }
