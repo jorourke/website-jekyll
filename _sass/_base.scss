@@ -79,6 +79,11 @@ p {
   background-color: $primary-middle;
 }
 
+.bg-primary-all {
+  background-color: $primary-middle;
+  height: auto;
+}
+
 .bg-dark {
   background-color: $theme-dark;
   color: white;
@@ -98,6 +103,10 @@ aside {
 
 .no-padding {
   padding: 0;
+}
+
+.navbar-simple {
+  background-color: $primary-middle;
 }
 
 // Navigation
@@ -217,21 +226,34 @@ header {
     z-index: -1;
   }
 
-  //background-image: url('../img/header.jpg');
-  //text-align: center;
-  //color: white;
   .header-content {
+    display: flex;
+    flex-direction: row;
     position: relative;
     text-align: left;
     padding: 100px 15px 100px;
     width: 100%;
 
+    .logo-container {
+      flex-shrink: 0; // This makes sure that the logos don't shrink if the container becomes too small.
+      margin-right: 20px; // This adds some space between the logos and the text.
+
+      .portfolio-logo {
+        max-width: 100%; // This makes sure that the logos don't overflow their container.
+        height: auto;
+        width: 200px;
+        margin: 100px;
+      }
+    }
+
+
     .header-content-inner {
+      flex-grow: 1; // This makes the text container take up the rest of the space.
       h1 {
         font-weight: 700;
         //text-transform: uppercase;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 50px;
       }
 
       hr {
@@ -444,6 +466,12 @@ body {
   -webkit-tap-highlight-color: $theme-dark;
 }
 
+.portfolio {
+  margin: 100px 0;
+  background-color: $primary-middle;
+  display: flex;
+}
+
 .medium-text {
   color: lighten($primary-dark, 30%);
   font-family: var(--text-font);
@@ -456,9 +484,10 @@ body {
   color: white;
   font-size: 2em;
 }
+
 .icon-svg {
   width: 80px;
-  height: 80px ;
+  height: 80px;
   fill: $primary-middle;
 }
 
