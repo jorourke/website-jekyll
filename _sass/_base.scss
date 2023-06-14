@@ -450,8 +450,15 @@ header {
 
 // Contact
 #contact .fa {
-  color: $primary-middle;
+  color: $primary-lightest;
   font-size: 4em;
+}
+
+#contact h2 {
+  color: $primary-lightest;
+}
+#contact p {
+  color: $primary-lightest;
 }
 
 // Extras
