@@ -503,6 +503,28 @@ header {
   color: $primary-lightest;
 }
 
+.portrait-photo {
+  border-radius: 50%;
+  //width: 125px;
+  //height: 125px;
+  overflow: hidden;
+}
+.contact-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 5;
+  //flex-wrap: wrap;
+  //justify-content: space-evenly;
+  align-items: center;
+}
+
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
