@@ -250,6 +250,7 @@ header {
       }
     }
 
+
     display: flex;
     flex-direction: row;
     position: relative;
@@ -451,9 +452,29 @@ header {
 }
 
 .call-to-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  //flex-wrap: wrap;
+  flex-direction: row;
   h2 {
     color: rgba(white, .7);
     margin: 0 auto 20px;
+  }
+  .about-text {
+    margin-right: 50px;
+  }
+
+  .image-container {
+    text-align: right;
+  }
+  .header-image {
+    background-color: $primary-lighter;
+    width: 200px;
+    height: 200px;
+    margin: 75px 50px 50px 50px;
+    border-radius: 20%;
   }
 }
 
