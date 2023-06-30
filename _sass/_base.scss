@@ -266,7 +266,7 @@ header {
         max-width: 100%; // This makes sure that the logos don't overflow their container.
         height: auto;
         width: 200px;
-        margin: 100px;
+        margin: 75px 50px;
         @media (max-width: 768px) {
           margin: 30px;
         }
@@ -614,4 +614,8 @@ body {
 
 .background-lightest {
   background-color: $primary-lightest
+}
+//#qwilr-logo #logotype * {
+#qwilr-logo #logotype * {
+    fill: #ffffff !important;
 }
