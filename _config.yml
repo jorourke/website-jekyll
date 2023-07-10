@@ -10,3 +10,6 @@ linkedin_username: jamesworourke
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-sitemap
