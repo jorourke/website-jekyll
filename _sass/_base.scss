@@ -5,14 +5,21 @@
 //$primary-light: rgba(78, 77, 92, 1);
 //$primary-middle: rgba(45, 70, 84, 1);
 //$primary-dark: rgba(36, 59, 74, 1);
+/* SCSS HEX */
+$primary-light: #4f7cacff;
+$primary-lightest: #c0e0deff;
+$primary-dark: #162521ff;
+//$primary-dark: #ffffff;
+$primary-middle: #3c474bff;
+$primary-lighter: #9eefe5ff;
 
 
 
-$primary-middle: #2E4756;
-$primary-light: #3C7A89;
-$primary-dark: #16262E;
-$primary-lightest: #DBC2CF;
-$primary-lighter: #9FA2B2;
+//$primary-middle: #2E4756;
+//$primary-light: #3C7A89;
+//$primary-dark: #16262E;
+//$primary-lightest: #DBC2CF;
+//$primary-lighter: #9FA2B2;
 
 
 :root {
@@ -20,7 +27,7 @@ $primary-lighter: #9FA2B2;
   --headline-font: "Degular Display Bold";
   --text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --primary-grey: $primary-middle;
-  --primary-dark: #011936;
+  //--primary-dark: #011936;
   --color-light: $primary-lighter;
 }
 
@@ -66,8 +73,6 @@ h5,
 h6 {
   color: $primary-middle;
   font-family: var(--text-font);
-  //@include sans-serif-font;
-  //@include degular-display-bold;
 }
 
 p {
@@ -78,7 +83,6 @@ p {
 }
 
 .bg-primary {
-  //background-color: var(--primary-color);
   background-color: $primary-middle;
 }
 
@@ -113,7 +117,6 @@ aside {
 }
 
 // Navigation
-
 .navbar-default {
   background-color: white;
   border-color: rgba($theme-dark, .5);
@@ -206,7 +209,6 @@ aside {
 }
 
 // Homepage Header
-
 header {
   position: relative;
   width: 100%;
@@ -249,11 +251,11 @@ header {
     width: 100%;
 
     .logo-container {
-      flex-shrink: 0; // This makes sure that the logos don't shrink if the container becomes too small.
-      margin-right: 20px; // This adds some space between the logos and the text.
+      flex-shrink: 0;
+      margin-right: 20px;
 
       .portfolio-logo {
-        max-width: 100%; // This makes sure that the logos don't overflow their container.
+        max-width: 100%;
         height: auto;
         width: 150px;
         margin: 75px 50px;
@@ -265,10 +267,9 @@ header {
 
 
     .header-content-inner {
-      flex-grow: 1; // This makes the text container take up the rest of the space.
+      flex-grow: 1;
       h1 {
         font-weight: 700;
-        //text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 50px;
       }
@@ -335,8 +336,8 @@ header {
   align-items: flex-start;
   justify-content: center;
   @media (min-width: 768px) {
-    justify-content: space-around; // Distributes items evenly in the line
-    gap: 20px; // Increases gap size for larger screens
+    justify-content: space-around;
+    gap: 20px;
   }
 }
 
@@ -446,7 +447,6 @@ header {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  //flex-wrap: wrap;
   flex-direction: row;
   h2 {
     color: rgba(white, .7);
@@ -522,8 +522,6 @@ header {
 
 .portrait-photo {
   border-radius: 50%;
-  //width: 125px;
-  //height: 125px;
   overflow: hidden;
 }
 .contact-all {
@@ -537,13 +535,10 @@ header {
   display: flex;
   flex-direction: row;
   flex-grow: 5;
-  //flex-wrap: wrap;
-  //justify-content: space-evenly;
   align-items: center;
 }
 
 // Extras
-// -- Highlight Color Customization
 ::-moz-selection {
   color: white;
   text-shadow: none;
@@ -595,9 +590,6 @@ body {
   fill: $primary-middle;
 }
 
-//.blurred-background {
-//    backdrop-filter: blur(5px);
-//}
 .background-darkest {
   background-color: $primary-dark
 }
@@ -605,7 +597,6 @@ body {
 .background-lightest {
   background-color: $primary-lightest
 }
-//#qwilr-logo #logotype * {
 #qwilr-logo #logotype * {
     fill: #ffffff !important;
 }
