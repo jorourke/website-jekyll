@@ -225,7 +225,7 @@ header {
     left: 0;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    //background-image: url('../img/header.jpg');
     background-color: $primary-dark;
     z-index: -1;
   }
@@ -572,7 +572,7 @@ body {
 }
 
 .medium-text {
-  color: lighten($primary-dark, 60%);
+  color: lighten($primary-dark, 80%);
   font-family: var(--text-font);
   font-size: 22px;
   width: clamp(325px, 85%, 50ch);;
