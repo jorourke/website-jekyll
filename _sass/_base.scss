@@ -18,19 +18,20 @@
 //$dark-magenta: #a11692ff;
 //$bright-pink-crayola: #ff4f79ff;
 //$melon: #ffb49aff;
-$primary-light: #f4f7f5ff;
-$primary-lighter: #a7a2a9ff;
-$primary-lightest: #575a5eff;
-$primary-middle: #222823ff;
-$primary-dark: #08090aff;
 /* CSS HEX */
 
-$black: #08090aff;
-$rose-quartz: #a7a2a9ff;
-$seasalt: #f4f7f5ff;
-$davys-gray: #575a5eff;
-$eerie-black: #222823ff;
+/* SCSS HEX */
+$dark-green: #012622ff;
+$dark-green-2: #003b36ff;
+$magnolia: #ece5f0ff;
+$fulvous: #e98a15ff;
+$palatinate: #59114dff;
 
+$primary-light: $palatinate;
+$primary-lighter: $fulvous;
+$primary-lightest: $magnolia;
+$primary-middle: $dark-green-2;
+$primary-dark: $dark-green;
 
 
 //$primary-middle: #2E4756;
